@@ -17,6 +17,11 @@ kubectl exec -it [podname] -c [containername] -- /bin/sh
 
 kubectl run mypod --image=nginx --dry-run=client -o yaml > mypod.yaml
 
+kubectl delete pod my-pod
+
+# Fast force delete (if pod is stuck):
+kubectl delete pod my-pod --force --grace-period=0
+
 # Edit Pod
 kubectl edit pod [podname]
 
