@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: pod-lifecycle-running
+  name: pod-lifecycle-running
+spec:
+  containers:
+  - image: nginx
+    name: pod-lifecycle-running
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

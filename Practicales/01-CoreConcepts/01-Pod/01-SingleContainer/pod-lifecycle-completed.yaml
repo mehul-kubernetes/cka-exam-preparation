@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: pod-lifecycle-completed
+  name: pod-lifecycle-completed
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - echo done
+    image: busybox
+    name: pod-lifecycle-completed
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
