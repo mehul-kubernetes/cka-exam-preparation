@@ -8,8 +8,8 @@ spec:
     image: nginx
     volumeMounts:
     - name: mypod-storage-local
-      mountPath: /usr/share/nginx/html
+      mountPath: /data
   volumes:
   - name: mypod-storage-local
     hostPath:
-      path: /var/www/nginx/html
+      path: /tmp/data
