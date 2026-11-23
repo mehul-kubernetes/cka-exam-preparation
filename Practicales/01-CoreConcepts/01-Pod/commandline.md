@@ -40,4 +40,5 @@ kubectl port-forward --address 0.0.0.0 pod/[podname] 8080:80
 
 # Check Veriables
 
-kubectl exec [podname] -- printenv UI_COLOR
+kubectl exec [podname] -- printenv [variablename]
+kubectl exec [podname] -- printenv
