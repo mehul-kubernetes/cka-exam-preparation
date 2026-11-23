@@ -1,6 +1,6 @@
 # ☸️ Certified Kubernetes Administrator (CKA) Practicals Guide
 
-Welcome to the **CKA Exam Preparation Practicals** repository! This collection is meticulously designed to provide hands-on practical exercises, production-grade manifest templates, and high-speed CLI workflows tailored to help you pass the CNCF **Certified Kubernetes Administrator (CKA)** exam.
+Welcome to the **CKA Exam Preparation Practicals** directory! This collection is organized according to the official CNCF Certified Kubernetes Administrator curriculum domains.
 
 ---
 
@@ -16,63 +16,89 @@ Welcome to the **CKA Exam Preparation Practicals** repository! This collection i
 
 ---
 
-## 📂 Practicals Index & Directory Navigation
+## 📂 Practicals Domain Navigation
 
-Click any practical module below to navigate directly to its documentation and hands-on exercises:
+Click any domain or practical module below to jump directly to its documentation:
 
-| # | Topic | Description & Links |
-|:---:|---|---|
-| **01** | **[Pod](./01-Pod/README.md)** | Single container and multi-container Pod lifecycle, pod specs, port mappings. <br>↳ *Sub-topic:* **[Multi-Container Pods](./01-Pod/02-MultiContainerPod/README.md)** |
-| **02** | **[ReplicationController](./02-ReplicationController/README.md)** | Legacy pod replication controller, equality selectors, self-healing. |
-| **03** | **[ReplicaSet](./03-Replicaset/README.md)** | Set-based selectors (`matchExpressions`), scaling, and controller reconciliation. |
-| **04** | **[Deployment](./04-Deployment/README.md)** | Declarative updates, rolling rollouts, undo/history, and pause/resume. <br>↳ *Sub-topic:* **[01-Deployment](./04-Deployment/01-Deployment/README.md)** & **[02-DeploymentStrategy](./04-Deployment/02-DeploymentStrategy/README.md)** |
-| **05** | **[Service](./05-Service/README.md)** | Service types: ClusterIP, NodePort, and LoadBalancer; Endpoints debugging and DNS. |
-| **06** | **[Namespace](./06-Namespace/README.md)** | Multi-tenancy, cross-namespace DNS FQDN, and context namespace switching. |
-| **07** | **[Labels](./07-Labels/README.md)** | Object metadata tagging, imperative label manipulation, and node labeling. |
-| **08** | **[Selector](./08-Selector/README.md)** | Equality vs set-based filtering, `-l` query expressions, service label selectors. |
-| **09** | **[Taints & Tolerations](./09-TaintsAndTolerations/README.md)** | Node repelling, taint effects (`NoSchedule`, `NoExecute`), toleration syntax. <br>↳ *Sub-topics:* **[deployment](./09-TaintsAndTolerations/deployment/README.md)** & **[pod](./09-TaintsAndTolerations/pod/README.md)** |
-| **10** | **[NodeAffinity](./10-NodeAffinity/README.md)** | Advanced node scheduling: `required` (hard) vs `preferred` (soft) affinity. |
-| **11** | **[Volume](./11-Volume/README.md)** | Pod storage abstractions: `emptyDir`, `hostPath`, shared pod volumes. |
-| **12** | **[PersistentVolume (PV)](./12-Persistanvolume/README.md)** | Cluster-scoped storage assets, access modes, and reclaim policies (`Retain`, `Delete`). |
-| **13** | **[PersistentVolumeClaim (PVC)](./13-PersistantVolumeClaim/README.md)** | Requesting persistent storage, volume binding, and pod mounting. |
-| **14** | **[StorageClass](./14-StorageClass/README.md)** | Dynamic provisioning, provisioners, and `WaitForFirstConsumer` binding mode. |
-| **15** | **[SidecarContainer](./15-SidecarContainer/README.md)** | Log streaming sidecars, shared volumes, and native sidecars (K8s 1.28+). |
-| **16** | **[InitContainer](./16-InitContainer/README.md)** | Sequential initialization, service readiness checks, initialization lifecycle. |
-| **17** | **[ConfigMap](./17-ConfigMap/README.md)** | Environment configuration injection, `envFrom`, single keys, and volume mounts. |
-| **18** | **[Secrets](./18-Secrets/README.md)** | Base64-encoded confidential configuration, TLS secrets, and registry credentials. |
-| **19** | **[ClusterManagement](./19-ClusterManagement/README.md)** | End-to-end cluster lifecycle and operations: <br>↳ **[01-Installation](./19-ClusterManagement/01-Installation/README.md)**: Kubeadm cluster bootstrap <br>↳ **[02-ETCDBackup](./19-ClusterManagement/02-ETCDBackup/README.md)**: ETCD snapshot save and restore <br>↳ **[03-VersionUpgrade](./19-ClusterManagement/03-VersionUpgrade/README.md)**: Kubeadm node upgrade workflows |
-| **20** | **[Security & RBAC](./20-Security/README.md)** | Authentication, authorization, and isolation: <br>↳ **[01-AuthenticationAndAuthorisation](./20-Security/01-AuthenticationAndAuthorisation/README.md)**: CSRs, certs, `kubectl auth can-i` <br>↳ **[02-KubeConfig](./20-Security/02-KubeConfig/README.md)**: Contexts, clusters, users, switching <br>↳ **[03-RoleBinding](./20-Security/03-RoleBinding/README.md)**: Roles & RoleBindings <br>&nbsp;&nbsp;&nbsp;&nbsp;↳ **[01-ClusterRole](./20-Security/03-RoleBinding/01-ClusterRole/README.md)** <br>&nbsp;&nbsp;&nbsp;&nbsp;↳ **[02-ClusterRoleBinding](./20-Security/03-RoleBinding/02-ClusterRoleBinding/README.md)** <br>↳ **[04-ServiceAccount](./20-Security/04-ServiceAccount/README.md)**: Workload identities <br>↳ **[05-ImageSecurity](./20-Security/05-ImageSecurity/README.md)**: Private image registries & pull secrets <br>↳ **[06-NetworkPolicy](./20-Security/06-NetworkPolicy/README.md)**: Ingress/egress network firewalls |
-| **Labs**| **[CKA Practical Labs](./Labs/README.md)** | Hands-on multi-resource scenario exercises simulating CKA exam tasks. |
+### 1. [01-CoreConcepts](./01-CoreConcepts/README.md)
+Foundational Kubernetes workload units and cluster isolation:
+- 📄 **[01-Pod](./01-CoreConcepts/01-Pod/README.md)**: Pod lifecycle, single-container specs, port mappings.
+  - ↳ **[02-MultiContainerPod](./01-CoreConcepts/01-Pod/02-MultiContainerPod/README.md)**: Shared network (`localhost`), shared volumes, sidecar patterns.
+- 📄 **[02-ReplicationController](./01-CoreConcepts/02-ReplicationController/README.md)**: Legacy replica controller, equality selectors.
+- 📄 **[03-Replicaset](./01-CoreConcepts/03-Replicaset/README.md)**: Set-based selectors (`matchExpressions`), replica scaling.
+- 📄 **[04-Deployment](./01-CoreConcepts/04-Deployment/README.md)**: Declarative updates, rollout history, and pause/resume.
+  - ↳ **[01-Deployment](./01-CoreConcepts/04-Deployment/01-Deployment/README.md)**: Deployment manifest specifications.
+  - ↳ **[02-DeploymentStrategy](./01-CoreConcepts/04-Deployment/02-DeploymentStrategy/README.md)**: `RollingUpdate` vs `Recreate`.
+- 📄 **[05-Service](./01-CoreConcepts/05-Service/README.md)**: Microservice networking (`ClusterIP`, `NodePort`, `LoadBalancer`, Endpoints).
+- 📄 **[06-Namespace](./01-CoreConcepts/06-Namespace/README.md)**: Logical isolation, cross-namespace DNS FQDN, context namespace switching.
 
 ---
 
-## ⚡ Essential CKA Exam Speed Setup
-
-At the very beginning of your exam, execute these standard commands to optimize speed:
-
-```bash
-# 1. Alias kubectl and enable auto-completion
-alias k=kubectl
-complete -o default -F __start_kubectl k
-
-# 2. Fast imperative dry-run helper
-export do="--dry-run=client -o yaml"
-
-# 3. Fast force-delete helper (instant termination)
-export now="--force --grace-period=0"
-
-# 4. Configure vim for YAML indentation (2 spaces, no tabs)
-cat <<EOF > ~/.vimrc
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set number
-EOF
-```
+### 2. [02-Scheduling](./02-Scheduling/README.md)
+Advanced node selection and pod placement policies:
+- 🏷️ **[01-Labels](./02-Scheduling/01-Labels/README.md)**: Object metadata tagging, node labeling.
+- 🔍 **[02-Selector](./02-Scheduling/02-Selector/README.md)**: Equality and set-based filtering expressions (`-l`).
+- 🚫 **[03-TaintsAndTolerations](./02-Scheduling/03-TaintsAndTolerations/README.md)**: Node repelling, `NoSchedule`, `NoExecute`, pod toleration specs.
+  - ↳ **[deployment](./02-Scheduling/03-TaintsAndTolerations/deployment/README.md)**
+  - ↳ **[pod](./02-Scheduling/03-TaintsAndTolerations/pod/README.md)**
+- 🧲 **[05-NodeAffinity](./02-Scheduling/05-NodeAffinity/README.md)**: Hard (`required...`) and soft (`preferred...`) affinity placement rules.
+- ⚖️ **[06-ResourceLimit](./02-Scheduling/06-ResourceLimit/README.md)**: CPU/memory requests and limits, OOMKilled (Exit Code 137).
+- ⚙️ **[07-StaticPod](./02-Scheduling/07-StaticPod/README.md)**: Kubelet-managed control-plane pods (`/etc/kubernetes/manifests`).
+- 🤖 **[08-DaemonSet](./02-Scheduling/08-DaemonSet/README.md)**: Node-level agent pods, DaemonSet manifest techniques.
+- 🔀 **[09-MultipleSchedulers](./02-Scheduling/09-MultipleSchedulers/README.md)**: Custom scheduler deployment and `spec.schedulerName`.
 
 ---
 
-## 🎯 Best Practices for the CKA Exam
-1. **Never write YAML from scratch**: Use `k run`, `k create deployment`, `k expose`, or `k create <resource>` with `$do` to generate clean YAML templates.
-2. **Context checking**: Each question gives you a specific context switch command (e.g. `kubectl config use-context k8s`). **Run it first** before solving!
-3. **Verify every step**: Always confirm your pods are running and services are bound with `kubectl get <resource> -n <ns>` before moving to the next question.
+### 3. [03-LoggingAndMonitoring](./03-LoggingAndMonitoring/README.md)
+Application and cluster observability:
+- 📜 **Container Logs**: `kubectl logs`, live streaming (`-f`), multi-container inspection (`-c`).
+- 💥 **Crashed Containers**: Inspecting previous logs (`kubectl logs -p / --previous`).
+- 🖥️ **Systemd Services**: Kubelet and containerd journal logs (`journalctl -u kubelet`).
+- 📊 **Resource Metrics**: Node and Pod resource consumption via `kubectl top`.
+
+---
+
+### 4. [04-Storage](./04-Storage/README.md)
+Ephemeral and persistent storage in Kubernetes:
+- 💾 **[01-Volume](./04-Storage/01-Volume/README.md)**: `emptyDir` (shared cache), `hostPath` (node filesystem).
+- 📦 **[02-Persistanvolume](./04-Storage/02-Persistanvolume/README.md)**: Cluster-scoped PersistentVolumes, access modes, reclaim policies (`Retain`, `Delete`).
+- 📑 **[04-PersistantVolumeClaim](./04-Storage/04-PersistantVolumeClaim/README.md)**: Requesting storage, volume binding, pod PVC mounts.
+- ⚡ **[05-StorageClass](./04-Storage/05-StorageClass/ReadMe.md)**: Dynamic volume provisioning, provisioners, `WaitForFirstConsumer`.
+
+---
+
+### 5. [05-Applican Lifecycle Management](./05-Applican%20Lifecycle%20Management/README.md)
+Managing rollouts, strategies, configuration, and patterns:
+- 🔄 **[01-RollingUpdateAndRoleback](./05-Applican%20Lifecycle%20Management/01-RollingUpdateAndRoleback/README.md)**: Image updates, rollout status, revision history, rollbacks.
+- 📐 **[02-DeploymentStretegy](./05-Applican%20Lifecycle%20Management/02-DeploymentStretegy/README.md)**: Tuning `maxSurge` & `maxUnavailable`, zero-downtime rollouts.
+- 🧩 **[03-ConfigureVeriables](./05-Applican%20Lifecycle%20Management/03-ConfigureVeriables/README.md)**: Plain env vars, Downward API (`fieldRef`, `resourceFieldRef`).
+- 📋 **[04-ConfigMap](./05-Applican%20Lifecycle%20Management/04-ConfigMap/README.md)**: Injecting non-confidential configuration as env vars or volumes.
+- 🔐 **[05-Secrets](./05-Applican%20Lifecycle%20Management/05-Secrets/README.md)**: Base64 sensitive data, TLS secrets, Docker registry credentials.
+- 🚚 **[06-SidecarContainer](./05-Applican%20Lifecycle%20Management/06-SidecarContainer/README.md)**: Log streaming sidecars, shared emptyDir, native sidecars (K8s 1.28+).
+- ⏳ **[07-InitContainer](./05-Applican%20Lifecycle%20Management/07-InitContainer/README.md)**: Pre-initialization routines, blocking dependency readiness checks.
+
+---
+
+### 6. [06-ClusterManagement](./06-ClusterManagement/README.md)
+Cluster lifecycle, bootstrap, and backup maintenance:
+- 🛠️ **[01-Installation](./06-ClusterManagement/01-Installation/README.md)**: `kubeadm init`, containerd configuration, CNI installation, node joining.
+- 💾 **[02-ETCDBackup](./06-ClusterManagement/02-ETCDBackup/README.md)**: `etcdctl snapshot save`, TLS certificate paths, restore to new data directory.
+- 🚀 **[03-VersionUpgrade](./06-ClusterManagement/03-VersionUpgrade/README.md)**: Kubeadm sequential minor version upgrades, node draining, uncordoning.
+
+---
+
+### 7. [07-Security](./07-Security/README.md)
+Authentication, authorization, identity, and isolation:
+- 🛡️ **[01-AuthenticationAndAuthorisation](./07-Security/01-AuthenticationAndAuthorisation/README.md)**: CSR generation, signing workflow, `kubectl auth can-i`.
+- 🔑 **[02-KubeConfig](./07-Security/02-KubeConfig/README.md)**: Clusters, users, contexts, `kubectl config use-context`.
+- 📜 **[03-RoleBinding](./07-Security/03-RoleBinding/README.md)**: Namespaced Roles and RoleBindings.
+  - ↳ **[01-ClusterRole](./07-Security/03-RoleBinding/01-ClusterRole/README.md)**: Cluster-scoped roles, namespace role reuse.
+  - ↳ **[02-ClusterRoleBinding](./07-Security/03-RoleBinding/02-ClusterRoleBinding/README.md)**: Global cluster permissions binding.
+- 👤 **[04-ServiceAccount](./07-Security/04-ServiceAccount/README.md)**: In-cluster process identities, token generation, pod attachment.
+- 🐳 **[05-ImageSecurity](./07-Security/05-ImageSecurity/README.md)**: Private image registries and `imagePullSecrets`.
+- 🧱 **[06-NetworkPolicy](./07-Security/06-NetworkPolicy/README.md)**: Default deny-all ingress, namespace selectors, port-level firewalls.
+
+---
+
+### 8. [Labs](./Labs/README.md)
+- 🧪 **[CKA Practical Labs](./Labs/README.md)**: End-to-end multi-resource scenario exercises simulating CKA exam tasks.
