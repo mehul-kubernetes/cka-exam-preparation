@@ -19,6 +19,8 @@ kubectl run mypod --image=nginx --dry-run=client -o yaml > mypod.yaml
 
 kubectl delete pod my-pod
 
+kubectl replace --force -f [podname]
+
 ---
 
 # Fast force delete (if pod is stuck):
@@ -35,3 +37,7 @@ kubectl edit pod [podname]
 kubectl port-forward --address 0.0.0.0 pod/[podname] 8080:80
 
 ---
+
+# Check Veriables
+
+kubectl exec [podname] -- printenv UI_COLOR
