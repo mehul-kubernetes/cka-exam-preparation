@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-arguments
+spec:
+  restartPolicy: Never
+  containers:
+    - name: demo-container
+      image: busybox
+      command: ["echo"]
+      args: ["Hello Word!"]
