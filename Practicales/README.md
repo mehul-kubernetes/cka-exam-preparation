@@ -76,12 +76,19 @@ Managing rollouts, strategies, configuration, and patterns:
 - 🔐 **[05-Secrets](./05-Applican%20Lifecycle%20Management/05-Secrets/README.md)**: Base64 sensitive data, TLS secrets, Docker registry credentials.
 - 🚚 **[06-SidecarContainer](./05-Applican%20Lifecycle%20Management/06-SidecarContainer/README.md)**: Log streaming sidecars, shared emptyDir, native sidecars (K8s 1.28+).
 - ⏳ **[07-InitContainer](./05-Applican%20Lifecycle%20Management/07-InitContainer/README.md)**: Pre-initialization routines, blocking dependency readiness checks.
+- 🩺 **[08-HealthCheck](./05-Applican%20Lifecycle%20Management/08-HealthCheck/README.md)**: Container Probes & Health Checks:
+  - ↳ 💓 **[01-LivenessProbe](./05-Applican%20Lifecycle%20Management/08-HealthCheck/01-LivenessProbe/README.md)**: Deadlock detection & automatic container restarts
+  - ↳ 🚦 **[02-ReadinessProbe](./05-Applican%20Lifecycle%20Management/08-HealthCheck/02-ReadinessProbe/README.md)**: Service endpoints gating & traffic routing
+  - ↳ 🚀 **[03-StartupProbe](./05-Applican%20Lifecycle%20Management/08-HealthCheck/03-StartupProbe/README.md)**: Protecting slow-starting applications
 
 ---
 
 ### 6. [06-ClusterManagement](./06-ClusterManagement/README.md)
 Cluster lifecycle, bootstrap, and backup maintenance:
-- 🛠️ **[01-Installation](./06-ClusterManagement/01-Installation/README.md)**: `kubeadm init`, containerd configuration, CNI installation, node joining.
+- 🛠️ **[01-Installation](./06-ClusterManagement/01-Installation/README.md)**: Cluster setup with `kubeadm`, plus local environments:
+  - ↳ 📦 **[01-Minikube](./06-ClusterManagement/01-Installation/01-Minikube/README.md)**: Local single/multi-node clusters, addons, tunneling
+  - ↳ 🐳 **[02-KindCluster](./06-ClusterManagement/01-Installation/02-KindCluster/README.md)**: Multi-node clusters in Docker, containerd, port mappings
+  - ↳ ⚡ **[03-K3dCluster](./06-ClusterManagement/01-Installation/03-K3dCluster/README.md)**: Ultra-lightweight k3s in Docker (~512MB RAM)
 - 💾 **[02-ETCDBackup](./06-ClusterManagement/02-ETCDBackup/README.md)**: `etcdctl snapshot save`, TLS certificate paths, restore to new data directory.
 - 🚀 **[03-VersionUpgrade](./06-ClusterManagement/03-VersionUpgrade/README.md)**: Kubeadm sequential minor version upgrades, node draining, uncordoning.
 

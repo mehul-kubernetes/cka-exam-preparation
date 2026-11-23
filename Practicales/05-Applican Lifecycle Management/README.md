@@ -16,3 +16,4 @@ The **Application Lifecycle Management** domain covers deploying, updating, conf
 | [`05-Secrets`](./05-Secrets/README.md) | **Secrets** | Base64 confidential keys, TLS certificates, private registry credentials. |
 | [`06-SidecarContainer`](./06-SidecarContainer/README.md) | **Sidecar Containers** | Logging, proxying, and adapter containers alongside primary apps. |
 | [`07-InitContainer`](./07-InitContainer/README.md) | **InitContainers** | Pre-initialization routines, blocking start until dependencies are available. |
+| [`08-HealthCheck`](./08-HealthCheck/README.md) | **Health Checks (Probes)** | Liveness, Readiness, and Startup probes (`httpGet`, `exec`, `tcpSocket`). |

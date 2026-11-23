@@ -14,8 +14,8 @@ cka-exam-preparation/
 │   ├── 02-Scheduling/            # Labels, Selectors, Taints/Tolerations, NodeAffinity, Limits, StaticPods, DaemonSets
 │   ├── 03-LoggingAndMonitoring/  # Pod logs, previous crashed logs, journalctl, metrics-server, top command
 │   ├── 04-Storage/               # Volumes (emptyDir, hostPath), PVs, PVCs, StorageClasses, dynamic provisioning
-│   ├── 05-Applican Lifecycle.../ # Rolling updates, rollbacks, deployment strategies, env vars, Downward API, ConfigMaps, Secrets, Sidecars, InitContainers
-│   ├── 06-ClusterManagement/     # Kubeadm bootstrap, ETCD snapshot save/restore, cluster version upgrades
+│   ├── 05-Applican Lifecycle.../ # Rolling updates, rollbacks, deployment strategies, env vars, Downward API, ConfigMaps, Secrets, Sidecars, InitContainers, HealthChecks (Probes)
+│   ├── 06-ClusterManagement/     # Installation (Kubeadm, Minikube, Kind, K3d), ETCD backup/restore, version upgrades
 │   ├── 07-Security/              # CSRs, Kubeconfig, Roles, RoleBindings, ClusterRoles, SAs, imagePullSecrets, NetworkPolicies
 │   └── Labs/                     # Multi-resource exam scenarios and simulation exercises
 └── Scenarios/                     # Advanced real-world infrastructure and networking setups

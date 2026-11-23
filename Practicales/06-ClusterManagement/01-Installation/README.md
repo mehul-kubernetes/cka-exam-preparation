@@ -1,11 +1,24 @@
-# 01 - Cluster Installation using Kubeadm
+# 01 - Cluster Installation & Local Environments
 
 ## 📌 Overview
-This guide walks through the end-to-end installation of a Kubernetes cluster using `kubeadm` on Ubuntu/Debian Linux nodes.
+This directory covers both **local cluster tools** for fast developer experimentation and **production multi-node cluster bootstrapping** using `kubeadm` (tested directly in the CKA exam).
 
 ---
 
-## 🛠️ Step 1: Prerequisites on ALL Nodes (Control Plane & Workers)
+## 📂 Installation Guides & Environments
+
+| Module | Type | Best For | Link |
+|---|:---:|---|---|
+| **01 - Minikube** | Local / Single or Multi-Node | Fast learning, addon testing (ingress, metrics-server, dashboard) | [Read Guide](./01-Minikube/README.md) |
+| **02 - KinD Cluster** | Local / Docker-in-Docker | Multi-node topology testing, pure `containerd` matching CKA, CI/CD | [Read Guide](./02-KindCluster/README.md) |
+| **03 - K3d Cluster** | Local / k3s in Docker | Ultra-low RAM footprint (~512MB), blazing fast startup | [Read Guide](./03-K3dCluster/README.md) |
+| **Kubeadm (Production)** | Multi-Node Baremetal / VM | Official CKA exam installation syllabus (Ubuntu/Debian) | *See Full Guide Below* |
+
+---
+
+## 🛠️ Production Kubeadm Cluster Setup (CKA Exam Curriculum)
+
+### Step 1: Prerequisites on ALL Nodes (Control Plane & Workers)
 
 1. **Disable Swap**:
    ```bash
