@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: pod-lifecycle-logs
+  name: pod-lifecycle-logs
+spec:
+  containers:
+  - args:
+    - /bin/sh
+    - -c
+    - echo Hello Logs
+    image: busybox
+    name: pod-lifecycle-logs
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Never
+status: {}
