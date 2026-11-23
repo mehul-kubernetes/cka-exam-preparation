@@ -42,3 +42,5 @@ kubectl port-forward --address 0.0.0.0 pod/[podname] 8080:80
 
 kubectl exec [podname] -- printenv [variablename]
 kubectl exec [podname] -- printenv
+
+---
