@@ -12,6 +12,7 @@ The **Scheduling** domain covers how Kubernetes determines which worker node sho
 | [`01-Labels`](./01-Labels/README.md) | **Labels** | Metadata tagging on pods and nodes (`kubectl label`). |
 | [`02-Selector`](./02-Selector/README.md) | **Selectors** | Equality and set-based filtering expressions (`-l`). |
 | [`03-TaintsAndTolerations`](./03-TaintsAndTolerations/README.md) | **Taints & Tolerations** | Node repelling, `NoSchedule`, `NoExecute`, pod toleration specs. |
+| [`04-PodAffinity`](./04-PodAffinity/README.md) | **Pod Affinity & Anti-Affinity** | Inter-pod co-location (`podAffinity`) and high-availability spreading (`podAntiAffinity`). |
 | [`05-NodeAffinity`](./05-NodeAffinity/README.md) | **Node Affinity** | Hard (`required...`) and soft (`preferred...`) placement rules. |
 | [`06-ResourceLimit`](./06-ResourceLimit/README.md) | **Resource Requests & Limits** | CPU/Memory requests, limits, OOMKilled (Exit Code 137), LimitRanges. |
 | [`07-StaticPod`](./07-StaticPod/README.md) | **Static Pods** | Kubelet-managed control-plane pods (`/etc/kubernetes/manifests`). |

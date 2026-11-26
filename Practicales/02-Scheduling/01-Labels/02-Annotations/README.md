@@ -1,0 +1,1 @@
+kubectl get pod [pod-name] -o jsonpath='{.metadata.annotations}'

@@ -23,13 +23,17 @@ Click any domain or practical module below to jump directly to its documentation
 ### 1. [01-CoreConcepts](./01-CoreConcepts/README.md)
 Foundational Kubernetes workload units and cluster isolation:
 - 📄 **[01-Pod](./01-CoreConcepts/01-Pod/README.md)**: Pod lifecycle, single-container specs, port mappings.
+  - ↳ **[01-SingleContainer](./01-CoreConcepts/01-Pod/01-SingleContainer/README.md)**: Entrypoint/CMD overrides, exit codes, CrashLoopBackOff, live logs.
   - ↳ **[02-MultiContainerPod](./01-CoreConcepts/01-Pod/02-MultiContainerPod/README.md)**: Shared network (`localhost`), shared volumes, sidecar patterns.
+  - ↳ **[03-Veriables](./01-CoreConcepts/01-Pod/03-Veriables/README.md)**: Plain env vars, ConfigMap/Secret refs, Downward API.
+  - ↳ **[04-DefaultPodStorage](./01-CoreConcepts/01-Pod/04-DefaultPodStorage/README.md)**: Ephemeral writable layer, data loss on restart, volume persistence comparison.
 - 📄 **[02-ReplicationController](./01-CoreConcepts/02-ReplicationController/README.md)**: Legacy replica controller, equality selectors.
 - 📄 **[03-Replicaset](./01-CoreConcepts/03-Replicaset/README.md)**: Set-based selectors (`matchExpressions`), replica scaling.
 - 📄 **[04-Deployment](./01-CoreConcepts/04-Deployment/README.md)**: Declarative updates, rollout history, and pause/resume.
   - ↳ **[01-Deployment](./01-CoreConcepts/04-Deployment/01-Deployment/README.md)**: Deployment manifest specifications.
   - ↳ **[02-DeploymentStrategy](./01-CoreConcepts/04-Deployment/02-DeploymentStrategy/README.md)**: `RollingUpdate` vs `Recreate`.
 - 📄 **[05-Service](./01-CoreConcepts/05-Service/README.md)**: Microservice networking (`ClusterIP`, `NodePort`, `LoadBalancer`, Endpoints).
+- 📄 **[05-StatefulSet](./01-CoreConcepts/05-StatefulSet/README.md)**: Persistent identity, headless services, ordered scaling, `volumeClaimTemplates`.
 - 📄 **[06-Namespace](./01-CoreConcepts/06-Namespace/README.md)**: Logical isolation, cross-namespace DNS FQDN, context namespace switching.
 
 ---
@@ -41,6 +45,7 @@ Advanced node selection and pod placement policies:
 - 🚫 **[03-TaintsAndTolerations](./02-Scheduling/03-TaintsAndTolerations/README.md)**: Node repelling, `NoSchedule`, `NoExecute`, pod toleration specs.
   - ↳ **[deployment](./02-Scheduling/03-TaintsAndTolerations/deployment/README.md)**
   - ↳ **[pod](./02-Scheduling/03-TaintsAndTolerations/pod/README.md)**
+- 👥 **[04-PodAffinity](./02-Scheduling/04-PodAffinity/README.md)**: Inter-pod affinity (co-location) and anti-affinity (high availability).
 - 🧲 **[05-NodeAffinity](./02-Scheduling/05-NodeAffinity/README.md)**: Hard (`required...`) and soft (`preferred...`) affinity placement rules.
 - ⚖️ **[06-ResourceLimit](./02-Scheduling/06-ResourceLimit/README.md)**: CPU/memory requests and limits, OOMKilled (Exit Code 137).
 - ⚙️ **[07-StaticPod](./02-Scheduling/07-StaticPod/README.md)**: Kubelet-managed control-plane pods (`/etc/kubernetes/manifests`).
@@ -107,5 +112,19 @@ Authentication, authorization, identity, and isolation:
 
 ---
 
-### 8. [Labs](./Labs/README.md)
+### 8. [08-HelmChart](./08-HelmChart/README.md)
+The Kubernetes package manager:
+- ⛵ **[Helm](./08-HelmChart/README.md)**: Package management, templating, `values.yaml`, upgrades, rollbacks, and repositories.
+
+---
+
+### 9. [09-CICDDeployment](./09-CICDDeployment/README.md)
+Declarative GitOps and modern CI/CD deployment workflows:
+- 🛠️ **[01-Kustomize](./09-CICDDeployment/01-Kustomize/README.md)**: Template-free configuration management (`base` & `overlays`).
+- 🐙 **[02-ArgoCD](./09-CICDDeployment/02-ArgoCD/README.md)**: Declarative GitOps continuous delivery and self-healing.
+- ⚡ **[03-FluxCD](./09-CICDDeployment/03-FluxCD/README.md)**: CNCF graduated GitOps toolkit, source controllers, and automated reconciliation.
+
+---
+
+### 10. [Labs](./Labs/README.md)
 - 🧪 **[CKA Practical Labs](./Labs/README.md)**: End-to-end multi-resource scenario exercises simulating CKA exam tasks.

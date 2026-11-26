@@ -17,6 +17,8 @@ cka-exam-preparation/
 │   ├── 05-Applican Lifecycle.../ # Rolling updates, rollbacks, deployment strategies, env vars, Downward API, ConfigMaps, Secrets, Sidecars, InitContainers, HealthChecks (Probes)
 │   ├── 06-ClusterManagement/     # Installation (Kubeadm, Minikube, Kind, K3d), ETCD backup/restore, version upgrades
 │   ├── 07-Security/              # CSRs, Kubeconfig, Roles, RoleBindings, ClusterRoles, SAs, imagePullSecrets, NetworkPolicies
+│   ├── 08-HelmChart/             # Helm package manager, chart templating, releases, upgrades/rollbacks
+│   ├── 09-CICDDeployment/        # Kustomize (base/overlays), Argo CD, and Flux CD GitOps continuous delivery
 │   └── Labs/                     # Multi-resource exam scenarios and simulation exercises
 └── Scenarios/                     # Advanced real-world infrastructure and networking setups
     ├── CNI/                      # Weave Net DaemonSet overlay network

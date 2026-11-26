@@ -11,6 +11,17 @@ In the **CKA Exam**, you must be able to:
 
 ---
 
+## 📂 Subdirectories in this Module
+
+| Subdirectory | Topic | Description |
+|---|---|---|
+| [`01-SingleContainer`](./01-SingleContainer/README.md) | **Single Container Specs & Lifecycles** | Entrypoints/CMD overrides, running, completed, error, CrashLoopBackOff, live logs. |
+| [`02-MultiContainerPod`](./02-MultiContainerPod/README.md) | **Multi-Container Pod Patterns** | Shared networking (`localhost`), shared volumes, sidecars, adapters. |
+| [`03-Veriables`](./03-Veriables/README.md) | **Environment Variables** | Plain key-values, ConfigMap/Secret refs, and Downward API metadata injection. |
+| [`04-DefaultPodStorage`](./04-DefaultPodStorage/README.md) | **Default Pod Storage & Ephemeral Layer** | Writable container layer, data loss on restart, volume persistence comparison. |
+
+---
+
 ## 🚀 CKA Fast Imperative Commands
 
 Save precious exam time using fast `kubectl` imperative commands with `--dry-run=client -o yaml`:
