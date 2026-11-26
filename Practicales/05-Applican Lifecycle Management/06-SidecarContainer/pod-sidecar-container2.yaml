@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-sidecar-container2
+spec:
+  containers:
+    - name: main-database
+      image: postgres:16-alpine
+      env:
+        - name: POSTGRES_PASSWORD
+          value: admin@1234567
+
+    - name: db-checker
+      image: postgres:16-alpine
+      command: ["sleep", "3600"]

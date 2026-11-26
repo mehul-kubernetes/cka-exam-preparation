@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-init-container3
+  labels:
+    app: myapp
+spec:
+  initContainers:
+  - name: wait-for-db
+    image: busybox:1.28
+    command: ['sh', '-c', 'until nc -z -w 2 db-service 3306; do echo waiting for db; sleep 2; done;']
+  containers:
+  - name: myapp-container
+    image: busybox:1.28
+    command: ['sh', '-c', 'echo The app is running! && sleep 3600']

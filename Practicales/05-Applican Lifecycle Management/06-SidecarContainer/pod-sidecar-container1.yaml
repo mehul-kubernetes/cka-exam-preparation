@@ -5,7 +5,7 @@ metadata:
   creationTimestamp: null
   labels:
     run: sidecar
-  name: sidecar
+  name: pod-sidecar-container1
 spec:
   containers:
   - image: nginx

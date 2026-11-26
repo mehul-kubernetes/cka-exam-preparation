@@ -19,6 +19,9 @@ In the **CKA Exam**, you must be able to:
 | [`02-MultiContainerPod`](./02-MultiContainerPod/README.md) | **Multi-Container Pod Patterns** | Shared networking (`localhost`), shared volumes, sidecars, adapters. |
 | [`03-Veriables`](./03-Veriables/README.md) | **Environment Variables** | Plain key-values, ConfigMap/Secret refs, and Downward API metadata injection. |
 | [`04-DefaultPodStorage`](./04-DefaultPodStorage/README.md) | **Default Pod Storage & Ephemeral Layer** | Writable container layer, data loss on restart, volume persistence comparison. |
+| [`04-PodConnamd&Arguments`](./04-PodConnamd&Arguments/README.md) | **Commands and Arguments** | Entrypoint & CMD overriding (`command` vs `args`), exit codes, and shell scripts. |
+| [`05-RestartPolicy`](./05-RestartPolicy/README.md) | **Pod Restart Policies** | `Always`, `OnFailure`, `Never`, exponential backoff delay, and controller rules. |
+| [`06-PodLifeCycle`](./06-PodLifeCycle/README.md) | **Pod Lifecycle & Diagnosing States** | Phases (Pending, Running, Succeeded, Failed), container states, and exit code troubleshooting. |
 
 ---
 

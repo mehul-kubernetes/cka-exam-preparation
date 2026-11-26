@@ -27,6 +27,9 @@ Foundational Kubernetes workload units and cluster isolation:
   - ↳ **[02-MultiContainerPod](./01-CoreConcepts/01-Pod/02-MultiContainerPod/README.md)**: Shared network (`localhost`), shared volumes, sidecar patterns.
   - ↳ **[03-Veriables](./01-CoreConcepts/01-Pod/03-Veriables/README.md)**: Plain env vars, ConfigMap/Secret refs, Downward API.
   - ↳ **[04-DefaultPodStorage](./01-CoreConcepts/01-Pod/04-DefaultPodStorage/README.md)**: Ephemeral writable layer, data loss on restart, volume persistence comparison.
+  - ↳ **[04-PodConnamd&Arguments](./01-CoreConcepts/01-Pod/04-PodConnamd&Arguments/README.md)**: Command vs args interaction, shell operators, and exit code control.
+  - ↳ **[05-RestartPolicy](./01-CoreConcepts/01-Pod/05-RestartPolicy/README.md)**: `Always`, `OnFailure`, `Never`, and exponential backoff delay.
+  - ↳ **[06-PodLifeCycle](./01-CoreConcepts/01-Pod/06-PodLifeCycle/README.md)**: Lifecycle phases, container states, CrashLoopBackOff, and exit code diagnostics.
 - 📄 **[02-ReplicationController](./01-CoreConcepts/02-ReplicationController/README.md)**: Legacy replica controller, equality selectors.
 - 📄 **[03-Replicaset](./01-CoreConcepts/03-Replicaset/README.md)**: Set-based selectors (`matchExpressions`), replica scaling.
 - 📄 **[04-Deployment](./01-CoreConcepts/04-Deployment/README.md)**: Declarative updates, rollout history, and pause/resume.

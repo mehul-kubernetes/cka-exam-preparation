@@ -14,6 +14,9 @@ The **Core Concepts** domain represents the foundational building blocks of Kube
 | ↳ [`02-MultiContainerPod`](./01-Pod/02-MultiContainerPod/README.md) | **Multi-Container Pod** | Shared networking (`localhost`), shared volumes, sidecar patterns. |
 | ↳ [`03-Veriables`](./01-Pod/03-Veriables/README.md) | **Environment Variables** | Plain key-values, ConfigMaps/Secrets refs, Downward API. |
 | ↳ [`04-DefaultPodStorage`](./01-Pod/04-DefaultPodStorage/README.md) | **Default Pod Storage & Ephemeral Layer** | Writable container layer, data loss on restart, volume persistence comparison. |
+| ↳ [`04-PodConnamd&Arguments`](./01-Pod/04-PodConnamd&Arguments/README.md) | **Commands and Arguments** | Entrypoint & CMD overriding (`command` vs `args`), exit codes, and shell scripts. |
+| ↳ [`05-RestartPolicy`](./01-Pod/05-RestartPolicy/README.md) | **Pod Restart Policies** | `Always`, `OnFailure`, `Never`, exponential backoff delay, and controller rules. |
+| ↳ [`06-PodLifeCycle`](./01-Pod/06-PodLifeCycle/README.md) | **Pod Lifecycle & Diagnosing States** | Phases (Pending, Running, Succeeded, Failed), container states, and exit code troubleshooting. |
 | [`02-ReplicationController`](./02-ReplicationController/README.md) | **ReplicationController** | Legacy controller, equality-based label selectors, self-healing. |
 | [`03-Replicaset`](./03-Replicaset/README.md) | **ReplicaSet** | Next-generation replica controller with set-based selectors (`matchExpressions`). |
 | [`04-Deployment`](./04-Deployment/README.md) | **Deployment** | Declarative updates, rolling rollouts, undo/history, pause/resume. |

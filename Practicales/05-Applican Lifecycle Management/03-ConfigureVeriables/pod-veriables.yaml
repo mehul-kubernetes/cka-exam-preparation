@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-veriables
+spec:
+  containers:
+    - name: demo-container
+      image: busybox
+      command: ["sleep", "3600"]
+      env:
+        - name: UI_COLOR
+          value: blue
+        - name: CUSTOMER_NAME
+          value: customer-a

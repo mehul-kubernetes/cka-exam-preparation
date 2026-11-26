@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-restart-onfailure
+spec:
+  restartPolicy: OnFailure
+  containers:
+    - name: demo-container
+      image: busybox
+      command: ["sh", "-c", "echo task failed; exit 1"]
